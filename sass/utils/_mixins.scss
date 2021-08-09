@@ -1,4 +1,18 @@
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 @mixin restaurant {
+    width: 95%;
+    background-color: white;
+    margin: 1rem 0;
     border-radius: 1rem;
-    width: 80%;
+}
+
+@mixin roboto-soft {
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: 300;
 }

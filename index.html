@@ -22,15 +22,14 @@
         <img class="logo-ohmyfood" src=./public/img/logo/ohmyfood.png alt="logo d'ohmyfood"/>
     </header>
     
+    <!-- SECTIONS -->
     <section class="map">
-      <div class="map-container">
-        <div class="map-circle">
-            <div class="container-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-        </div>
+      <div class="map__container">
+          <div class="icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
       </div>
-      <form>
+      <form class="map__form">
         <input
             type="text"
             name="lieu"
@@ -42,10 +41,10 @@
       </form>
     </section>
 
-    <section>
-      <h1>Réservez le menu qui vous convient</h1>
-      <div>Découvrez des restaurants d'exception, sélectionnés par nos soins</div>
-      <button>Explorer nos restaurants</button>
+    <section class="presentation">
+      <h1 class="presentation__title">Réservez le menu qui vous convient</h1>
+      <div class="presentation__information">Découvrez des restaurants d'exception, sélectionnés par nos soins</div>
+      <button class="presention__btn">Explorer nos restaurants</button>
     </section>
 
     <section class="steps">
@@ -55,43 +54,35 @@
         <div>Dégustez au restaurant</div>
     </section>
 
-    <section>
+    <section class="container">
         <h2>Restaurants</h2>
+
         <a class="restaurant" href="palette_du_gout.html">
           <img class="restaurant__img" src=./public/img/palette_du_gout.jpg alt="plat proposé chez La palette du goût"/>
-          <ul class="">
-              <li class="restaurant__name"><em>La palette du goût</em></li>
-              <li class="restaurant__site">Ménilmontant</li>
-              <li class="">
-                  <i class="fas heart"></i></li>
-          </ul>
+          <div class="restaurant__name"><em>La palette du goût</em></div>
+          <div class="restaurant__site">Ménilmontant</div>
+          <div class="restaurant__fav"><i class="fas heart"></i></div>
         </a>
+
         <a class="restaurant" href="note_enchantee.html">
           <img class="restaurant__img" src=./public/img/note_enchantee.jpg alt="plat proposé chez La note enchantee"/>
-          <ul class="">
-              <li class="restaurant__name"><em>La note enchantée</em></li>
-              <li class="restaurant__site">Charonne</li>
-              <li class="">
-                  <i class="fas heart"></i></li>
-          </ul>
+          <div class="restaurant__name"><em>La note enchantée</em></div>
+          <div class="restaurant__site">Charonne</div>
+          <div class="restaurant__fav"><i class="fas heart"></i></div>
         </a>
+
         <a class="restaurant" href="a_la_francaise.html">
           <img class="restaurant__img" src=./public/img/a_la_francaise.jpg alt="plat proposé chez A la française"/>
-          <ul class="">
-              <li class="restaurant__name"><em>À la française</em></li>
-              <li class="restaurant__site">Cité Rouge</li>
-              <li class="">
-                  <i class="fas heart"></i></li>
-          </ul>
+          <div class="restaurant__name"><em>À la française</em></div>
+          <div class="restaurant__site">Cité Rouge</div>
+          <div class="restaurant__fav"><i class="fas heart"></i></div>
         </a>
+
         <a class="restaurant" href="delice_des_sens.html">
           <img class="restaurant__img" src=./public/img/delice_des_sens.jpg alt="plat proposé chez Le délice des sens"/>
-          <ul class="">
-              <li class="restaurant__name"><em>Le délice des sens</em></li>
-              <li class="restaurant__site">Folie-Méricourt</li>
-              <li class="">
-                  <i class="fas heart"></i></li>
-          </ul>
+          <div class="restaurant__name"><em>Le délice des sens</em></div>
+          <div class="restaurant__site">Folie-Méricourt</div>
+          <div class="restaurant__fav"><i class="fas heart"></i></div>
         </a>
 
     </section>
