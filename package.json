@@ -1,0 +1,22 @@
+{
+  "name": "projet3sass",
+  "version": "1.0.0",
+  "description": "Projet 3 - Oh my food",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EuverteT/ThomasEuverte_3_03082021.git"
+  },
+  "keywords": [
+    "git"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EuverteT/ThomasEuverte_3_03082021/issues"
+  },
+  "homepage": "https://github.com/EuverteT/ThomasEuverte_3_03082021#readme"
+}
