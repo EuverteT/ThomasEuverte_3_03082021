@@ -27,12 +27,29 @@ img {
 
 h1 {
   font-family: "Roboto";
-  text-align: center;
   font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
 }
 
 h2 {
+  font-family: "Roboto";
+  font-size: 1.5rem;
   width: 100%;
+}
+
+.presention__btn {
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 80%;
+  align-self: center;
+  color: white;
+  background: radial-gradient(#FF79DA, #9356DC);
 }
 
 .header {
@@ -59,28 +76,33 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: grey;
+  background-color: #f7f7f7;
   padding: 2rem;
 }
 .presentation__information {
   font-family: "Roboto";
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 300;
   text-align: center;
-  padding: 1rem;
 }
 
 .steps {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 1rem;
+}
+.steps__element {
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: grey;
+  background-color: #f7f7f7;
   align-items: center;
   padding: 1rem;
 }
@@ -94,6 +116,11 @@ h2 {
 .restaurant__img {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
+}
+
+.footer {
+  background-color: #666666;
+  padding: 1rem;
 }
 
 /*!

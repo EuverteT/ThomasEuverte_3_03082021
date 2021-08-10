@@ -1,11 +1,13 @@
 h1 {
-font-family: "Roboto";
-text-align: center;
-font-size: 1.5rem;
+    @include title-typo;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
 }
 
 
 h2 {
+    @include title-typo;
     width: 100%;
 }
 

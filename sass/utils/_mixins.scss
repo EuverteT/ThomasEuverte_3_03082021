@@ -11,8 +11,19 @@
     border-radius: 1rem;
 }
 
-@mixin roboto-soft {
+@mixin title-typo {
+    font-family: "Roboto";
+    font-size: 1.5rem;
+}
+
+@mixin soft-typo {
+    font-family: "Roboto";
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+@mixin bold-typo {
     font-family: "Roboto";
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 500;
 }

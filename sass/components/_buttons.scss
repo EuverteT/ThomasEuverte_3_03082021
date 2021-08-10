@@ -1,4 +1,13 @@
-.action {
+.presention__btn {
+    @include bold-typo;
+ 
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: 80%;
+    align-self: center;
+    color: white;
+    background: radial-gradient(#FF79DA, #9356DC);
 
 }
 
