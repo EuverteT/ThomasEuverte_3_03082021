@@ -1,20 +1,40 @@
-.map-search-container {
-    height: 50px;
-    width: 100%;
+.localisation {
+    @include flex-row;
+    justify-content: center;
     background-color: $mid-grey;
 
+    .fa-map-marker-alt {
+        font-size: 1rem;
     }
 
-.map {
-    padding: 1rem;
-    
-    &__container {
-        height: 50px;
-        width: 50px;
-    }
-    @include flex-column;
-}
+        &__map-icon{
+            height: 50px;
+            width: 50px;
 
+            &-container{
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+            &-insert{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+        
+            }
+        }
+        &__form{
+            align-self: center;
+
+            input {
+                border-style: none;
+                background-color: $mid-grey;
+                @include bold-typo;
+            }
+        }
+
+    }
 
 
 .presentation {
@@ -31,21 +51,22 @@
 
 .steps {
     @include flex-column;
-
+    align-items: center;
     padding: 1rem;
 
     &__description {
         @include bold-typo;
+        align-self: center;
     }
 }
 
 .step-block {
     @include flex-row;
-
+    width: 80%;
     background-color: $soft-grey;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    padding: 1rem;
+    padding: 1.3rem 0;
 
     &__number {
         width: 30px;
