@@ -4,11 +4,12 @@
     border-radius: 2rem;
     padding: 1rem;
     margin: 1rem;
-    width: 80%;
+    width: 70%;
     align-self: center;
     color: white;
     background: radial-gradient(#FF79DA, #9356DC);
-
+    box-shadow: 0.7rem 0.7rem 1rem rgb(224, 224, 224);
+    border: thin;
 }
 
 .steps {
