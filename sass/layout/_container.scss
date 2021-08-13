@@ -20,7 +20,6 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-        
             }
         }
         &__form{
@@ -57,6 +56,7 @@
         @include bold-typo;
         align-self: center;
     }
+
 }
 
 .step-block {
@@ -68,6 +68,16 @@
     margin: 0.8rem 1.2rem;
     padding: 1.3rem 0;
     position: relative;
+
+    &:hover {
+        background-color: hsl(267,66,90);
+        transition: background-color 300ms;
+
+        & .fas {
+            color: $colour-primary;
+            transition: color 300ms;
+        }
+    }
 
     .fas {
         color: $hard-grey;

@@ -1,15 +1,51 @@
 .footer {
     background-color: $hard-grey;
-    padding: 1rem;
+    padding: 1.5rem;
 
     .footer-font {
         color: white;
+        @include bold-typo;
+    }
+
+    .adjust {
+        margin:0.35rem 0;
+    }
+
+    .fas {
+        font-size: 0.8rem;
+    }
+
+    &__logo {
+        margin-bottom: 1rem;
     }
 
     &__proposition {
         @include flex-row;
         justify-content: unset;
         color: white;
+
+        &-icon {
+            width: 20px;
+            height: 30px;
+
+            &-container{
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+            &-insert{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        }
+
+        &-text {
+            align-self: center;
+            margin-left: 0.2rem;
+        }
         
     }
 }
