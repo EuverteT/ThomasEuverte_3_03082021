@@ -143,11 +143,11 @@
 }
 .restaurant {
     @include restaurant;
+    @include shadow;
     position: relative;
 
     .fas {
         display: block;
-        color: $gradient;
         background: -webkit-linear-gradient($colour-primary,$colour-secondary);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
