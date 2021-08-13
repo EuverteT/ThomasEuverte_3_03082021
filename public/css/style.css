@@ -51,8 +51,27 @@ h2 {
   align-self: center;
   color: white;
   background: radial-gradient(#FF79DA, #9356DC);
-  box-shadow: 0.7rem 0.7rem 1rem #e0e0e0;
+  box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
   border: thin;
+  position: relative;
+  z-index: 1;
+}
+.presention__btn:hover::after {
+  opacity: 1;
+}
+.presention__btn::after {
+  content: "";
+  border-radius: 2rem;
+  box-shadow: 0.7rem 0.7rem 1rem #828282;
+  background: radial-gradient(#ff94e1, #a06be1);
+  transition: opacity 500ms;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
 }
 
 .header {
@@ -207,6 +226,15 @@ h2 {
   border-radius: 1rem;
   position: relative;
 }
+.restaurant .gradient-rela {
+  position: relative;
+}
+.restaurant .gradient-abso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: radial-gradient(#FF79DA, #9356DC);
+}
 .restaurant__img {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
@@ -215,10 +243,11 @@ h2 {
   background-color: #99E2D0;
   position: absolute;
   top: 5%;
-  left: 73%;
+  right: 4%;
   padding: 0.4rem 0.7rem 0.2rem 0.7rem;
   font-size: 0.9rem;
   font-weight: 700;
+  border-radius: 0.1rem;
   color: #008766;
 }
 .restaurant__heart {

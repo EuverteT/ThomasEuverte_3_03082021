@@ -7,9 +7,33 @@
     width: 70%;
     align-self: center;
     color: white;
-    background: radial-gradient(#FF79DA, #9356DC);
-    box-shadow: 0.7rem 0.7rem 1rem rgb(224, 224, 224);
+    background: $gradient;
+    box-shadow: 0.7rem 0.7rem 1rem rgb(200, 200, 200);
     border: thin;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+            &::after {
+            opacity: 1;
+        }
+    }
+        
+    &::after {
+        content: "";
+        border-radius: 2rem;
+        box-shadow: 0.7rem 0.7rem 1rem rgb(130, 130, 130);
+        background: $light-gradient;
+        transition: opacity 500ms;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+    }
+    
 }
 
 .steps {
