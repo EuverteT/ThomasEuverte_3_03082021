@@ -1,7 +1,5 @@
 .header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include flex-row;
     padding: 1.2rem 2.5rem 1.2rem 0;
 }
 

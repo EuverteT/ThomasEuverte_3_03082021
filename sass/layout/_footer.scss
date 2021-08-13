@@ -1,4 +1,15 @@
 .footer {
     background-color: $hard-grey;
     padding: 1rem;
+
+    .footer-font {
+        color: white;
+    }
+
+    &__proposition {
+        @include flex-row;
+        justify-content: unset;
+        color: white;
+        
+    }
 }
