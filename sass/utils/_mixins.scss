@@ -37,10 +37,23 @@
     text-shadow: 1px 0 1px rgba(0,0,0,0.3);
 }
 
+@mixin cool-text ($color: black, $font-size: 1.8rem) {
+    font-family: Shrikhand;
+    color: $color;
+    font-size: $font-size;
+}
+
 @mixin shadow {
     box-shadow: 0.7rem 0.7rem 1rem rgb(200, 200, 200);
     &:hover {
         box-shadow: 0.7rem 0.7rem 1rem rgb(130, 130, 130);
         transition: all 500ms;
     }
+}
+
+@mixin fav-heart {
+    display: block;
+    background: -webkit-linear-gradient($colour-primary,$colour-secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
 }

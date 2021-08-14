@@ -1,7 +1,9 @@
 .footer {
     background-color: $hard-grey;
     padding: 1.5rem;
-
+    a {
+        @include cool-text(white, 1rem);
+    }
     .footer-font {
         color: white;
         @include bold-typo;

@@ -1,0 +1,35 @@
+.one-restaurant {
+    @include flex-column;
+
+    &__img {
+        height: 260px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__information {
+
+        .fas {
+            @include fav-heart;
+        }
+
+        @include flex-row;
+        justify-content: space-around;
+        position: absolute;
+        top: 280px;
+        width: 100%;
+        background-color: white;
+        border-radius: 3rem 3rem 0 0;
+        padding: 2rem 0;
+
+
+        &-name {
+            @include cool-text;
+        }
+        &-heart {
+            position: unset;
+            align-self: center;
+        }
+    }
+    
+}

@@ -147,10 +147,7 @@
     position: relative;
 
     .fas {
-        display: block;
-        background: -webkit-linear-gradient($colour-primary,$colour-secondary);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+        @include fav-heart;
     }
 
     &__img {
