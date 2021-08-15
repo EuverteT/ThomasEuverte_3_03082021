@@ -13,7 +13,6 @@
     top: 280px;
     width: 100%;
 
-
     &__information {
 
         .fas {
@@ -22,8 +21,6 @@
 
         @include flex-row;
         justify-content: space-around;
-        background-color: $soft-grey;
-        border-radius: 3rem 3rem 0 0;
         padding: 2rem 0;
 
 
@@ -40,7 +37,7 @@
 main {
     top: 280px;
     background-color: $soft-grey;
-
+    border-radius: 3rem 3rem 0 0;
 }
 .part {
     @include flex-column;
@@ -56,6 +53,19 @@ main {
         width: 40px;
     }
 
+@keyframes block {
+
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
     &__all-block {
         @include flex-row;
         justify-content: space-between;
@@ -63,6 +73,17 @@ main {
         @include restaurant;
         margin: 0.4rem 0;
         @include shadow;
+
+        &--first {
+            animation: block 750ms;
+        }
+        &--second {
+            animation: block 1000ms 50ms;
+        }
+        &--third {
+            animation: block 1250ms 100ms;
+        }
+
 
         &-title {
             width: 100%;

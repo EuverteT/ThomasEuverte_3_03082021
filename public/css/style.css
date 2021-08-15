@@ -383,8 +383,6 @@ h2 {
   flex-direction: row;
   justify-content: center;
   justify-content: space-around;
-  background-color: #f7f7f7;
-  border-radius: 3rem 3rem 0 0;
   padding: 2rem 0;
 }
 .one-restaurant__information .fas {
@@ -406,6 +404,7 @@ h2 {
 main {
   top: 280px;
   background-color: #f7f7f7;
+  border-radius: 3rem 3rem 0 0;
 }
 
 .part {
@@ -425,6 +424,15 @@ main {
   border: #99E2D0 1px double;
   width: 40px;
 }
+@keyframes block {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .part__all-block {
   display: flex;
   flex-wrap: wrap;
@@ -442,6 +450,15 @@ main {
 .part__all-block:hover {
   box-shadow: 0.7rem 0.7rem 1rem #828282;
   transition: all 500ms;
+}
+.part__all-block--first {
+  animation: block 750ms;
+}
+.part__all-block--second {
+  animation: block 1000ms 50ms;
+}
+.part__all-block--third {
+  animation: block 1250ms 100ms;
 }
 .part__all-block-title {
   width: 100%;
