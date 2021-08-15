@@ -1,4 +1,4 @@
-.one-restaurant {
+.one-restaurant-img {
     @include flex-column;
 
     &__img {
@@ -6,6 +6,13 @@
         width: 100%;
         position: relative;
     }
+}
+
+.one-restaurant {
+    position: absolute;
+    top: 280px;
+    width: 100%;
+
 
     &__information {
 
@@ -15,10 +22,7 @@
 
         @include flex-row;
         justify-content: space-around;
-        position: absolute;
-        top: 280px;
-        width: 100%;
-        background-color: white;
+        background-color: $soft-grey;
         border-radius: 3rem 3rem 0 0;
         padding: 2rem 0;
 
@@ -32,4 +36,57 @@
         }
     }
     
+}
+main {
+    top: 280px;
+    background-color: $soft-grey;
+
+}
+.part {
+    @include flex-column;
+
+    &__title {
+        @include soft-typo;
+        padding: 0.2rem 1rem;
+    }
+
+    &__highlight {
+        margin: 0 1rem;
+        border: $colour-tertiary 1px double;
+        width: 40px;
+    }
+
+    &__all-block {
+        @include flex-row;
+        justify-content: space-between;
+        align-self: center;
+        @include restaurant;
+        margin: 0.4rem 0;
+        @include shadow;
+
+        &-title {
+            width: 100%;
+            @include bold-typo;
+            font-size: 1.1rem;
+            padding: 0.7rem;
+        }
+
+        &-precision {
+            @include soft-typo;
+            font-size: 0.9rem;
+            padding: 0 0 0.7rem 0.7rem;
+        }
+
+        &-price {
+            @include bold-typo;
+            font-size: 1rem;
+            padding: 0 1rem 0.7rem 0;
+        }
+    }
+}
+
+.order {
+    @include flex-column;
+    margin: 2rem;
+    position: relative;
 }

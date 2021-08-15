@@ -7,11 +7,10 @@
 @import "./components/buttons";
 
 @import "./layout/header";
-@import "./layout/container";
 @import "./layout/form";
 @import "./layout/footer";
 
-
+@import "./pages/_index.scss";
 @import "./pages/_alafrancaise.scss";
 @import "./pages/_delicedessens.scss";
 @import "./pages/_noteenchantee.scss";

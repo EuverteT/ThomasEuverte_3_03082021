@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,36 +14,173 @@
       rel="stylesheet"
     />
     <title>La palette du goût</title>
-    </head>
+  </head>
 
-    <body>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <img class="logo-ohmyfood" src=./public/img/logo/ohmyfood.png alt="logo
+      d'ohmyfood"/>
+    </header>
 
-      <!-- HEADER -->
-      <header class="header">
-        <img class="logo-ohmyfood" src=./public/img/logo/ohmyfood.png alt="logo d'ohmyfood"/>
-      </header>
+    <section class="one-restaurant-img">
+      <img class="one-restaurant-img__img" src=./public/img/palette_du_gout.jpg
+      alt="plat proposé chez La palette du goût"/>
+    </section>
 
-      <section class="one-restaurant">
-        <img class="one-restaurant__img" src=./public/img/palette_du_gout.jpg alt="plat proposé chez La palette du goût"/>
-        <div class="one-restaurant__information">
-          <div class="one-restaurant__information-name">
-            La palette du goût
-          </div>
-          <div class="one-restaurant__information-heart restaurant__heart">
-            <div class="restaurant__heart-container">
-              <div class="restaurant__heart-insert">
-                <i class="fas fa-heart"></i>
-              </div>
+    <main class="one-restaurant">
+      <div class="one-restaurant__information">
+        <div class="one-restaurant__information-name">La palette du goût</div>
+        <div class="one-restaurant__information-heart restaurant__heart">
+          <div class="restaurant__heart-container">
+            <div class="restaurant__heart-insert">
+              <i class="fas fa-heart"></i>
             </div>
           </div>
         </div>
+      </div>
+    
+      <div class="part">
+        <div class="part__title">
+        ENTRÉES
+        </div>
+        <div class="part__highlight">
+        </div>
+        <div class="part__all-block">
+          <div class="part__all-block-title">Fricassée d'escargot
+          </div>
+          <div class="part__all-block-precision">Au piment d'Espelette
+          </div>
+          <div class="part__all-block-price">25€
+          </div>
+        </div>
+        <div class="part__all-block">
+          <div class="part__all-block-title">Foie gras de canard mi-cuit
+          </div>
+          <div class="part__all-block-precision">Et ses copeaux de truffe noire
+          </div>
+          <div class="part__all-block-price">35€
+          </div>
+        </div>
+        <div class="part__all-block">
+          <div class="part__all-block-title">Oeuf au plat
+          </div>
+          <div class="part__all-block-precision">Assaisonné à la truffe sur lit de caviar
+          </div>
+          <div class="part__all-block-price">20€
+          </div>
+        </div>
+      </div>
 
+      <div class="part">
+        <div class="part__title">
+        PLATS
+        </div>
+        <div class="part__highlight">
+        </div>
+        <div class="part__all-block">
+          <div class="part__all-block-title">Filet de boeuf aux herbes
+          </div>
+          <div class="part__all-block-precision">Accompagné de sa ribambelle de légumes
+          </div>
+          <div class="part__all-block-price">40€
+          </div>
+        </div>
+        <div class="part__all-block">
+          <div class="part__all-block-title">Parmentier de queue de boeuf
+          </div>
+          <div class="part__all-block-precision">À la truffe noire sur sa purée de panais
+          </div>
+          <div class="part__all-block-price">35€
+          </div>
+        </div>
+        <div class="part__all-block">
+          <div class="part__all-block-title">Filet de turbot
+          </div>
+          <div class="part__all-block-precision">Aux agrumes
+          </div>
+          <div class="part__all-block-price">44€
+          </div>
+        </div>
+      </div>
       
-      </section>
+
+      <div class="part">
+        <div class="part__title">
+        DESSERTS
+        </div>
+        <div class="part__highlight">
+        </div>
+        <div class="part__all-block">
+          <div class="part__all-block-title">Paris-Brest
+          </div>
+          <div class="part__all-block-precision">Revisité
+          </div>
+          <div class="part__all-block-price">18€
+          </div>
+        </div>
+        <div class="part__all-block">
+          <div class="part__all-block-title">Macaron au chocolat d'exception
+          </div>
+          <div class="part__all-block-precision">Et glace à la vanille de Madagascar
+          </div>
+          <div class="part__all-block-price">22€
+          </div>
+        </div>
+        <div class="part__all-block">
+          <div class="part__all-block-title">Mousse au chocolat
+          </div>
+          <div class="part__all-block-precision">Au piment d'Espelette et à la truffe noire
+          </div>
+          <div class="part__all-block-price">23€
+          </div>
+        </div>
+
+      </div>
+
+      <div class="order">
+        <button class="order__btn btn">Commander</button>
+      </div>
+  
+    </main>
 
 
-        
+    <!-- FOOTER -->
+    <footer class="footer footer-position-adjust">
+      <div class="footer__logo">
+        <a href="./index.html">ohmyfood</a>
+      </div>
+      <div class="footer__proposition">
+        <div class="footer__proposition-icon">
+          <div class="footer__proposition-icon-container">
+            <div class="footer__proposition-icon-insert">
+              <i class="fas fa-utensils"></i>
+            </div>
+          </div>
+        </div>
+        <a class="footer__proposition-text footer-font" href="#"
+          >Proposer un restaurant</a
+        >
+      </div>
 
-    </body>
-
+      <div class="footer__proposition">
+        <div class="footer__proposition-icon">
+          <div class="footer__proposition-icon-container">
+            <div class="footer__proposition-icon-insert">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+          </div>
+        </div>
+        <a class="footer__proposition-text footer-font" href="#"
+          >Devenir partenaire</a
+        >
+      </div>
+      <div>
+        <a class="footer-font" href="#">Mentions légales</a>
+      </div>
+      <div class="adjust">
+        <a class="footer-font" href="mailto:hello@openclasrooms.com">Contact</a>
+      </div>
+    </footer>
+  </body>
 </html>
