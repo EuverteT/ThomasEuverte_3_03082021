@@ -1,6 +1,12 @@
 .header {
     @include flex-row;
     padding: 1.2rem 2.5rem 1.2rem 0;
+
+    .fa-arrow-left {
+        align-self: center;
+        position: absolute;
+        left: 20px;
+    }
 }
 
 .logo-ohmyfood {

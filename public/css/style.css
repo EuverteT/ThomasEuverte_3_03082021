@@ -82,6 +82,11 @@ h2 {
   justify-content: center;
   padding: 1.2rem 2.5rem 1.2rem 0;
 }
+.header .fa-arrow-left {
+  align-self: center;
+  position: absolute;
+  left: 20px;
+}
 
 .logo-ohmyfood {
   height: 1.8rem;
