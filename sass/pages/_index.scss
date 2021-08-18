@@ -177,6 +177,15 @@
             width: 20px;
             position: absolute;
         }
+
+        img:hover {
+            opacity: 0;
+
+            .fas {
+                opacity: 0.5;
+            }
+
+        }
     }
     &__heart-container {
         width: 100%;

@@ -11,6 +11,7 @@
 .one-restaurant {
     width: 100%;
     transform: translateY(-40px);
+    margin-bottom: -40px;
 
     &__information {
 
@@ -26,16 +27,15 @@
         &-name {
             @include cool-text;
         }
+
         &-heart {
             position: unset;
             align-self: center;
-            
         }
     }
     
 }
 main {
-    top: 280px;
     background-color: $soft-grey;
     border-radius: 3rem 3rem 0 0;
 }
@@ -78,10 +78,10 @@ main {
             animation: block 750ms;
         }
         &--second {
-            animation: block 1000ms 50ms;
+            animation: block 1250ms 100ms;
         }
         &--third {
-            animation: block 1250ms 100ms;
+            animation: block 1750ms 200ms;
         }
 
 
@@ -108,6 +108,6 @@ main {
 
 .order {
     @include flex-column;
-    margin: 2rem;
+    padding: 2rem;
     position: relative;
 }
