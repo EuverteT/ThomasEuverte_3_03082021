@@ -9,9 +9,8 @@
 }
 
 .one-restaurant {
-    position: absolute;
-    top: 280px;
     width: 100%;
+    transform: translateY(-40px);
 
     &__information {
 
@@ -30,6 +29,7 @@
         &-heart {
             position: unset;
             align-self: center;
+            
         }
     }
     

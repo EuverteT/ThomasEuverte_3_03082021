@@ -171,6 +171,12 @@
         position: absolute;
         top: 80%;
         left: 85%;
+
+        img {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+        }
     }
     &__heart-container {
         width: 100%;

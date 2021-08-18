@@ -80,16 +80,16 @@ h2 {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  padding: 1.2rem 2.5rem 1.2rem 0;
+  padding: 1.2rem 2.5rem 1rem 2.5rem;
 }
 .header .fa-arrow-left {
   align-self: center;
   position: absolute;
-  left: 20px;
+  left: 25px;
 }
 
 .logo-ohmyfood {
-  height: 1.8rem;
+  height: 1.7rem;
 }
 
 .footer {
@@ -339,6 +339,11 @@ h2 {
   top: 80%;
   left: 85%;
 }
+.restaurant__heart img {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+}
 .restaurant__heart-container {
   width: 100%;
   height: 100%;
@@ -378,9 +383,8 @@ h2 {
 }
 
 .one-restaurant {
-  position: absolute;
-  top: 280px;
   width: 100%;
+  transform: translateY(-40px);
 }
 .one-restaurant__information {
   display: flex;
