@@ -82,8 +82,6 @@ h2 {
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
   padding: 1rem;
-  /*margin: 1rem;*/
-  /*width: 70%;*/
   align-self: center;
   color: white;
   background: radial-gradient(#FF79DA, #9356DC);
@@ -91,11 +89,6 @@ h2 {
   border: thin;
   position: relative;
   z-index: 1;
-}
-@media screen and (min-width: 1023px) {
-  .btn {
-    width: 30%;
-  }
 }
 .btn:hover::after {
   opacity: 1;
@@ -137,6 +130,7 @@ h2 {
 .footer {
   background-color: #353535;
   padding: 1.5rem;
+  animation: background-spinner 3000ms;
 }
 .footer a {
   font-family: Shrikhand;
@@ -149,9 +143,6 @@ h2 {
   font-size: 1rem;
   font-weight: 500;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
-}
-.footer .adjust {
-  margin: 0.35rem 0;
 }
 .footer .fas {
   font-size: 0.8rem;
@@ -185,6 +176,9 @@ h2 {
 .footer__proposition-text {
   align-self: center;
   margin-left: 0.2rem;
+}
+.footer__contact {
+  margin: 0.35rem 0;
 }
 
 .localisation {
@@ -241,8 +235,13 @@ h2 {
   text-align: center;
 }
 .presentation__btn {
-  margin: 1.5rem;
+  margin: 1.2rem;
   width: 70%;
+}
+@media screen and (min-width: 1023px) {
+  .presentation__btn {
+    width: 40%;
+  }
 }
 
 .steps {
@@ -352,7 +351,7 @@ h2 {
   flex-direction: column;
   background-color: #f7f7f7;
   align-items: center;
-  padding: 1rem;
+  padding: 2.5rem 1rem 3.5rem 1rem;
   animation: background-spinner 3000ms;
 }
 @media screen and (min-width: 1023px) {
@@ -363,11 +362,12 @@ h2 {
 }
 
 .restaurant {
-  width: 85%;
+  width: 95%;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
   position: relative;
+  margin: 0.5rem 0;
 }
 .restaurant:hover {
   box-shadow: 0.7rem 0.7rem 1rem #828282;
@@ -473,7 +473,7 @@ h2 {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  justify-content: space-around;
+  justify-content: unset;
   padding: 2rem 0;
   width: 100%;
 }
@@ -487,6 +487,13 @@ h2 {
   font-family: Shrikhand;
   color: black;
   font-size: 1.8rem;
+  width: 85%;
+  text-align: center;
+}
+@media screen and (min-width: 1023px) {
+  .one-restaurant__information-name {
+    width: 95%;
+  }
 }
 .one-restaurant__information-heart {
   position: unset;
@@ -537,9 +544,10 @@ main {
   justify-content: center;
   justify-content: space-between;
   align-self: center;
-  width: 85%;
+  width: 95%;
   background-color: white;
   border-radius: 1rem;
+  width: 85%;
   margin-bottom: 0.8rem;
   padding: 0.8rem 1.1rem 0.6rem 0.8rem;
   box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
@@ -591,6 +599,15 @@ main {
 @media screen and (min-width: 1023px) {
   .order {
     width: 100%;
+  }
+}
+.order__btn {
+  margin: 1rem;
+  width: 70%;
+}
+@media screen and (min-width: 1023px) {
+  .order__btn {
+    width: 30%;
   }
 }
 
