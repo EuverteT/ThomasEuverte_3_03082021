@@ -1,6 +1,9 @@
 .header {
     @include flex-row;
     padding: 1.2rem 2.5rem 1rem 2.5rem;
+    animation: background-spinner 3000ms;
+    z-index: -1;
+  
 
     .fa-arrow-left {
         align-self: center;

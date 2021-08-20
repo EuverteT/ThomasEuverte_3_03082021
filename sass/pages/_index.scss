@@ -1,6 +1,7 @@
 .localisation {
     @include flex-row;
     background-color: $mid-grey;
+    animation: background-spinner 3000ms;
 
     .fa-map-marker-alt {
         font-size: 1rem;
@@ -37,13 +38,19 @@
 
 .presentation {
     @include flex-column;
+    animation: background-spinner 3000ms;
 
     background-color: $soft-grey;
-    padding: 2rem;
+    padding: 1.8rem 2rem 2.4rem 2rem;
 
     &__information {
         @include soft-typo;
         text-align: center;
+    }
+    &__btn {
+        margin: 1.5rem;
+        width: 70%;
+
     }
 }
 
@@ -51,6 +58,12 @@
     @include flex-column;
     align-items: center;
     padding: 2rem 1rem 3rem 1rem;
+    animation: background-spinner 3000ms;
+
+    @include tablet-desktop {
+        @include flex-row;
+    }
+
 
     &__description {
         @include bold-typo;
@@ -68,6 +81,10 @@
     margin: 0.8rem 1.2rem;
     padding: 1.3rem 0;
     position: relative;
+
+    @include tablet-desktop {
+        width: 29%;
+    }
 
     &:hover {
         background-color: hsl(267,66,90);
@@ -140,11 +157,22 @@
     background-color: $soft-grey;
     align-items: center;
     padding: 1rem;
+    animation: background-spinner 3000ms;
+
+    @include tablet-desktop {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
 }
 .restaurant {
     @include restaurant;
     @include shadow;
     position: relative;
+
+    @include tablet-desktop {
+        width: 23%;
+    }
 
     .fas {
         @include fav-heart;

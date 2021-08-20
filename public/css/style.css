@@ -4,6 +4,41 @@ body {
   font-size: 20px;
 }
 
+.loading-spinner {
+  animation: spinner 3000ms;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  opacity: 0;
+  font-family: Shrikhand;
+  color: black;
+  font-size: 1.8rem;
+}
+
+@keyframes spinner {
+  0% {
+    opacity: 0;
+  }
+  50%, 95% {
+    transform: scale(3);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes background-spinner {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
 ul {
   list-style-type: none;
   padding: 0;
@@ -47,8 +82,8 @@ h2 {
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
   padding: 1rem;
-  margin: 1rem;
-  width: 70%;
+  /*margin: 1rem;*/
+  /*width: 70%;*/
   align-self: center;
   color: white;
   background: radial-gradient(#FF79DA, #9356DC);
@@ -56,6 +91,11 @@ h2 {
   border: thin;
   position: relative;
   z-index: 1;
+}
+@media screen and (min-width: 1023px) {
+  .btn {
+    width: 30%;
+  }
 }
 .btn:hover::after {
   opacity: 1;
@@ -81,6 +121,8 @@ h2 {
   flex-direction: row;
   justify-content: center;
   padding: 1.2rem 2.5rem 1rem 2.5rem;
+  animation: background-spinner 3000ms;
+  z-index: -1;
 }
 .header .fa-arrow-left {
   align-self: center;
@@ -151,6 +193,7 @@ h2 {
   flex-direction: row;
   justify-content: center;
   background-color: #ededed;
+  animation: background-spinner 3000ms;
 }
 .localisation .fa-map-marker-alt {
   font-size: 1rem;
@@ -186,8 +229,9 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  animation: background-spinner 3000ms;
   background-color: #f7f7f7;
-  padding: 2rem;
+  padding: 1.8rem 2rem 2.4rem 2rem;
 }
 .presentation__information {
   font-family: "Roboto";
@@ -196,6 +240,10 @@ h2 {
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
+.presentation__btn {
+  margin: 1.5rem;
+  width: 70%;
+}
 
 .steps {
   display: flex;
@@ -203,6 +251,15 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem 3rem 1rem;
+  animation: background-spinner 3000ms;
+}
+@media screen and (min-width: 1023px) {
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 .steps__description {
   font-family: "Roboto";
@@ -224,6 +281,11 @@ h2 {
   margin: 0.8rem 1.2rem;
   padding: 1.3rem 0;
   position: relative;
+}
+@media screen and (min-width: 1023px) {
+  .step-block {
+    width: 29%;
+  }
 }
 .step-block:hover {
   background-color: #e4d5f6;
@@ -291,12 +353,18 @@ h2 {
   background-color: #f7f7f7;
   align-items: center;
   padding: 1rem;
+  animation: background-spinner 3000ms;
+}
+@media screen and (min-width: 1023px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .restaurant {
-  width: 95%;
+  width: 85%;
   background-color: white;
-  margin: 1rem 0;
   border-radius: 1rem;
   box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
   position: relative;
@@ -304,6 +372,11 @@ h2 {
 .restaurant:hover {
   box-shadow: 0.7rem 0.7rem 1rem #828282;
   transition: all 500ms;
+}
+@media screen and (min-width: 1023px) {
+  .restaurant {
+    width: 23%;
+  }
 }
 .restaurant .fas {
   display: block;
@@ -387,6 +460,14 @@ h2 {
   transform: translateY(-40px);
   margin-bottom: -40px;
 }
+@media screen and (min-width: 1023px) {
+  .one-restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 .one-restaurant__information {
   display: flex;
   flex-wrap: wrap;
@@ -394,6 +475,7 @@ h2 {
   justify-content: center;
   justify-content: space-around;
   padding: 2rem 0;
+  width: 100%;
 }
 .one-restaurant__information .fas {
   display: block;
@@ -420,6 +502,12 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-bottom: 1.8rem;
+}
+@media screen and (min-width: 1023px) {
+  .part {
+    width: 32%;
+  }
 }
 .part__title {
   font-family: "Roboto";
@@ -429,7 +517,7 @@ main {
   padding: 0.2rem 1rem;
 }
 .part__highlight {
-  margin: 0 1rem;
+  margin: 0 1rem 1rem 1rem;
   border: #99E2D0 1px double;
   width: 40px;
 }
@@ -449,11 +537,11 @@ main {
   justify-content: center;
   justify-content: space-between;
   align-self: center;
-  width: 95%;
+  width: 85%;
   background-color: white;
-  margin: 1rem 0;
   border-radius: 1rem;
-  margin: 0.4rem 0;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1.1rem 0.6rem 0.8rem;
   box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
 }
 .part__all-block:hover {
@@ -476,7 +564,7 @@ main {
   font-weight: 500;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
-  padding: 0.7rem;
+  padding-bottom: 0.5rem;
 }
 .part__all-block-precision {
   font-family: "Roboto";
@@ -484,23 +572,26 @@ main {
   font-weight: 200;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   font-size: 0.9rem;
-  padding: 0 0 0.7rem 0.7rem;
 }
 .part__all-block-price {
   font-family: "Roboto";
   font-size: 1rem;
   font-weight: 500;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
-  font-size: 1rem;
-  padding: 0 1rem 0.7rem 0;
+  font-size: 0.9rem;
 }
 
 .order {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   position: relative;
+}
+@media screen and (min-width: 1023px) {
+  .order {
+    width: 100%;
+  }
 }
 
 /*!

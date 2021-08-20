@@ -13,6 +13,10 @@
     transform: translateY(-40px);
     margin-bottom: -40px;
 
+    @include tablet-desktop {
+        @include flex-row;
+    }
+
     &__information {
 
         .fas {
@@ -22,6 +26,7 @@
         @include flex-row;
         justify-content: space-around;
         padding: 2rem 0;
+        width: 100%;
 
 
         &-name {
@@ -41,6 +46,11 @@ main {
 }
 .part {
     @include flex-column;
+    margin-bottom: 1.8rem;
+
+    @include tablet-desktop {
+        width: 32%;
+    }
 
     &__title {
         @include soft-typo;
@@ -48,7 +58,7 @@ main {
     }
 
     &__highlight {
-        margin: 0 1rem;
+        margin: 0 1rem 1rem 1rem;
         border: $colour-tertiary 1px double;
         width: 40px;
     }
@@ -71,7 +81,8 @@ main {
         justify-content: space-between;
         align-self: center;
         @include restaurant;
-        margin: 0.4rem 0;
+        margin-bottom: 0.8rem;
+        padding: 0.8rem 1.1rem 0.6rem 0.8rem;
         @include shadow;
 
         &--first {
@@ -89,25 +100,27 @@ main {
             width: 100%;
             @include bold-typo;
             font-size: 1.1rem;
-            padding: 0.7rem;
+            padding-bottom: 0.5rem;
         }
 
         &-precision {
             @include soft-typo;
             font-size: 0.9rem;
-            padding: 0 0 0.7rem 0.7rem;
         }
 
         &-price {
             @include bold-typo;
-            font-size: 1rem;
-            padding: 0 1rem 0.7rem 0;
+            font-size: 0.9rem;
         }
     }
 }
 
 .order {
     @include flex-column;
-    padding: 2rem;
+    padding: 0 2rem 2rem 2rem;
     position: relative;
+
+    @include tablet-desktop {
+        width: 100%;
+    }
 }

@@ -2,6 +2,46 @@ body {
   margin: 0;
   font-size: 20px;
   }
+
+.loading-spinner {
+  animation: spinner 3000ms;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  opacity: 0;
+  @include cool-text;
+}
+
+@keyframes spinner {
+  0% {
+    opacity: 0;
+  }
+
+  50%, 95% {
+    transform: scale(3) ;
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes background-spinner {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100%{
+    opacity: 0.4;
+  }
+}
+
 ul {
   list-style-type: none;
   padding: 0;

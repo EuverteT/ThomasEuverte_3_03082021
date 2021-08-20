@@ -3,8 +3,8 @@
  
     border-radius: 2rem;
     padding: 1rem;
-    margin: 1rem;
-    width: 70%;
+    /*margin: 1rem;*/
+    /*width: 70%;*/
     align-self: center;
     color: white;
     background: $gradient;
@@ -12,6 +12,10 @@
     border: thin;
     position: relative;
     z-index: 1;
+
+    @include tablet-desktop {
+        width: 30%;
+    }
 
     &:hover {
             &::after {
