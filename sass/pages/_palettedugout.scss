@@ -58,6 +58,12 @@ main {
         width: 32%;
     }
 
+    .fas {
+        color: $colour-tertiary;
+        font-size: 1rem;
+        transform: rotate(-360deg);
+    }
+
     &__title {
         @include soft-typo;
         padding: 0.2rem 1rem;
@@ -82,29 +88,10 @@ main {
 
 }
 
-// @keyframes Xanim {
-
-//     0% {
-//         opacity:0;
-//         transform: scaleX(0);          
-
-//     }
-
-//     5% {
-//         opacity: 1;
-//     }
-//     50% {
-//         opacity: 1;
-//         transform: scaleX(1);
-//     }
-
-//     100% {
-//         transform: scaleX(1);
-//     }
-// }
 
     &__block {
         @include flex-row;
+        flex-wrap: unset;
         justify-content: space-between;
         align-self: center;
         @include restaurant;
@@ -113,10 +100,12 @@ main {
 
         &:hover {
             .part__block-Xanim {
-                // animation: Xanim 3000ms forwards infinite;
                 transform: scaleX(1);
-                // opacity: 1;
-                transition: all 1000ms;
+                transition: all 500ms;
+            }
+            .fas {
+                transform: rotate(0deg);
+                transition: all 500ms;
             }
         }
 
@@ -132,6 +121,9 @@ main {
 
 
         &-choice {
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
 
             &-title {
             width: 100%;
@@ -142,6 +134,7 @@ main {
             &-precision {
                 @include soft-typo;
                 font-size: 0.9rem;
+                text-overflow: ellipsis;
             }
             &-price {
                 @include bold-typo;
@@ -153,10 +146,29 @@ main {
         &-Xanim {
             background-color: $colour-tertiary;
             border-radius: 0 1rem 1rem 0;
-            width: 70px;
+            width: 150px;
             transform-origin: right;
-            // opacity:0;
-            transform: scaleX(0)
+            transform: scaleX(0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            &-container {
+                width: 25px;
+                height: 25px;
+                position: relative;
+                background-color: white;
+                border-radius: 1rem;
+            }
+
+            &-insert {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%)
+
+            }
         }
     }
 }
