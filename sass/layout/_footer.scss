@@ -1,7 +1,6 @@
 .footer {
     background-color: $hard-grey;
     padding: 1.5rem;
-    animation: background-spinner 3000ms;
     
     a {
         @include cool-text(white, 1rem);

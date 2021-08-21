@@ -12,9 +12,13 @@
 }
 
 @mixin restaurant {
-    width: 95%;
     background-color: white;
     border-radius: 1rem;
+    box-shadow: 0.7rem 0.7rem 1rem rgb(200, 200, 200);
+    &:hover {
+        box-shadow: 0.7rem 0.7rem 1rem rgb(130, 130, 130);
+        transition: all 500ms;
+    }
 }
 
 @mixin title-typo {
@@ -40,14 +44,6 @@
     font-family: Shrikhand;
     color: $color;
     font-size: $font-size;
-}
-
-@mixin shadow {
-    box-shadow: 0.7rem 0.7rem 1rem rgb(200, 200, 200);
-    &:hover {
-        box-shadow: 0.7rem 0.7rem 1rem rgb(130, 130, 130);
-        transition: all 500ms;
-    }
 }
 
 @mixin fav-heart {

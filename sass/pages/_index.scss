@@ -1,7 +1,6 @@
 .localisation {
     @include flex-row;
     background-color: $mid-grey;
-    animation: background-spinner 3000ms;
 
     .fa-map-marker-alt {
         font-size: 1rem;
@@ -38,7 +37,6 @@
 
 .presentation {
     @include flex-column;
-    animation: background-spinner 3000ms;
 
     background-color: $soft-grey;
     padding: 1.8rem 2rem 2.4rem 2rem;
@@ -62,7 +60,6 @@
     @include flex-column;
     align-items: center;
     padding: 2rem 1rem 3rem 1rem;
-    animation: background-spinner 3000ms;
 
     @include tablet-desktop {
         @include flex-row;
@@ -161,7 +158,6 @@
     background-color: $soft-grey;
     align-items: center;
     padding: 2.5rem 1rem 3.5rem 1rem;
-    animation: background-spinner 3000ms;
 
     @include tablet-desktop {
         flex-direction: row;
@@ -171,7 +167,7 @@
 }
 .restaurant {
     @include restaurant;
-    @include shadow;
+    width: 95%;
     position: relative;
     margin: 0.5rem 0;
 

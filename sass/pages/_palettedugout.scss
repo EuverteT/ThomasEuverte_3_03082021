@@ -82,15 +82,43 @@ main {
 
 }
 
-    &__all-block {
+// @keyframes Xanim {
+
+//     0% {
+//         opacity:0;
+//         transform: scaleX(0);          
+
+//     }
+
+//     5% {
+//         opacity: 1;
+//     }
+//     50% {
+//         opacity: 1;
+//         transform: scaleX(1);
+//     }
+
+//     100% {
+//         transform: scaleX(1);
+//     }
+// }
+
+    &__block {
         @include flex-row;
         justify-content: space-between;
         align-self: center;
         @include restaurant;
         width: 85%;
         margin-bottom: 0.8rem;
-        padding: 0.8rem 1.1rem 0.6rem 0.8rem;
-        @include shadow;
+
+        &:hover {
+            .part__block-Xanim {
+                // animation: Xanim 3000ms forwards infinite;
+                transform: scaleX(1);
+                // opacity: 1;
+                transition: all 1000ms;
+            }
+        }
 
         &--first {
             animation: block 750ms;
@@ -103,21 +131,32 @@ main {
         }
 
 
-        &-title {
+        &-choice {
+
+            &-title {
             width: 100%;
             @include bold-typo;
             font-size: 1.1rem;
             padding-bottom: 0.5rem;
-        }
+            }
+            &-precision {
+                @include soft-typo;
+                font-size: 0.9rem;
+            }
+            &-price {
+                @include bold-typo;
+                font-size: 0.9rem;
+            }
 
-        &-precision {
-            @include soft-typo;
-            font-size: 0.9rem;
         }
-
-        &-price {
-            @include bold-typo;
-            font-size: 0.9rem;
+        
+        &-Xanim {
+            background-color: $colour-tertiary;
+            border-radius: 0 1rem 1rem 0;
+            width: 70px;
+            transform-origin: right;
+            // opacity:0;
+            transform: scaleX(0)
         }
     }
 }

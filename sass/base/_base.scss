@@ -7,10 +7,43 @@ body {
   animation: spinner 3000ms;
   position: absolute;
   top: 50%;
-  left: 50%;
   z-index: 3;
   opacity: 0;
   @include cool-text;
+  background: $gradient;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    &--1 {
+      animation: spinner-moving-text 1000ms;
+    }
+    &--2 {
+      animation: spinner-moving-text 1750ms;
+    }
+    &--3 {
+      animation: spinner-moving-text 2500ms;
+    }
+  }
+}
+
+@keyframes spinner-moving-text {
+  0% {
+    transform: translateX(100px);
+
+  }
+  // 50% {
+  //   transform: translateX(50px);
+  // }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.spinner-active {
+  animation: background-spinner 3000ms;
+
 }
 
 @keyframes spinner {
@@ -19,7 +52,7 @@ body {
   }
 
   50%, 95% {
-    transform: scale(3) ;
+    transform: scale(1) ;
     opacity: 1;
   }
 
@@ -30,15 +63,11 @@ body {
 
 @keyframes background-spinner {
   0% {
+    opacity: 0.05;
+  }
+
+  100% {
     opacity: 0.2;
-  }
-
-  50% {
-    opacity: 0.3;
-  }
-
-  100%{
-    opacity: 0.4;
   }
 }
 

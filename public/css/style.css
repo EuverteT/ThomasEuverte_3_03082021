@@ -8,12 +8,36 @@ body {
   animation: spinner 3000ms;
   position: absolute;
   top: 50%;
-  left: 50%;
   z-index: 3;
   opacity: 0;
   font-family: Shrikhand;
   color: black;
   font-size: 1.8rem;
+  background: radial-gradient(#FF79DA, #9356DC);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.loading-spinner__text--1 {
+  animation: spinner-moving-text 1000ms;
+}
+.loading-spinner__text--2 {
+  animation: spinner-moving-text 1750ms;
+}
+.loading-spinner__text--3 {
+  animation: spinner-moving-text 2500ms;
+}
+
+@keyframes spinner-moving-text {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.spinner-active {
+  animation: background-spinner 3000ms;
 }
 
 @keyframes spinner {
@@ -21,7 +45,7 @@ body {
     opacity: 0;
   }
   50%, 95% {
-    transform: scale(3);
+    transform: scale(1);
     opacity: 1;
   }
   100% {
@@ -30,13 +54,10 @@ body {
 }
 @keyframes background-spinner {
   0% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.3;
+    opacity: 0.05;
   }
   100% {
-    opacity: 0.4;
+    opacity: 0.2;
   }
 }
 ul {
@@ -114,7 +135,6 @@ h2 {
   flex-direction: row;
   justify-content: center;
   padding: 1.2rem 2.5rem 1rem 2.5rem;
-  animation: background-spinner 3000ms;
   z-index: -1;
 }
 .header .fa-arrow-left {
@@ -130,7 +150,6 @@ h2 {
 .footer {
   background-color: #353535;
   padding: 1.5rem;
-  animation: background-spinner 3000ms;
 }
 .footer a {
   font-family: Shrikhand;
@@ -187,7 +206,6 @@ h2 {
   flex-direction: row;
   justify-content: center;
   background-color: #ededed;
-  animation: background-spinner 3000ms;
 }
 .localisation .fa-map-marker-alt {
   font-size: 1rem;
@@ -223,7 +241,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  animation: background-spinner 3000ms;
   background-color: #f7f7f7;
   padding: 1.8rem 2rem 2.4rem 2rem;
 }
@@ -250,7 +267,6 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem 3rem 1rem;
-  animation: background-spinner 3000ms;
 }
 @media screen and (min-width: 1023px) {
   .steps {
@@ -352,7 +368,6 @@ h2 {
   background-color: #f7f7f7;
   align-items: center;
   padding: 2.5rem 1rem 3.5rem 1rem;
-  animation: background-spinner 3000ms;
 }
 @media screen and (min-width: 1023px) {
   .container {
@@ -362,10 +377,10 @@ h2 {
 }
 
 .restaurant {
-  width: 95%;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
+  width: 95%;
   position: relative;
   margin: 0.5rem 0;
 }
@@ -537,35 +552,37 @@ main {
     opacity: 1;
   }
 }
-.part__all-block {
+.part__block {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   justify-content: space-between;
   align-self: center;
-  width: 95%;
   background-color: white;
   border-radius: 1rem;
+  box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
   width: 85%;
   margin-bottom: 0.8rem;
-  padding: 0.8rem 1.1rem 0.6rem 0.8rem;
-  box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
 }
-.part__all-block:hover {
+.part__block:hover {
   box-shadow: 0.7rem 0.7rem 1rem #828282;
   transition: all 500ms;
 }
-.part__all-block--first {
+.part__block:hover .part__block-Xanim {
+  transform: scaleX(1);
+  transition: all 1000ms;
+}
+.part__block--first {
   animation: block 750ms;
 }
-.part__all-block--second {
+.part__block--second {
   animation: block 1250ms 100ms;
 }
-.part__all-block--third {
+.part__block--third {
   animation: block 1750ms 200ms;
 }
-.part__all-block-title {
+.part__block-choice-title {
   width: 100%;
   font-family: "Roboto";
   font-size: 1rem;
@@ -574,19 +591,26 @@ main {
   font-size: 1.1rem;
   padding-bottom: 0.5rem;
 }
-.part__all-block-precision {
+.part__block-choice-precision {
   font-family: "Roboto";
   font-size: 1.1rem;
   font-weight: 200;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   font-size: 0.9rem;
 }
-.part__all-block-price {
+.part__block-choice-price {
   font-family: "Roboto";
   font-size: 1rem;
   font-weight: 500;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   font-size: 0.9rem;
+}
+.part__block-Xanim {
+  background-color: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
+  width: 70px;
+  transform-origin: right;
+  transform: scaleX(0);
 }
 
 .order {
