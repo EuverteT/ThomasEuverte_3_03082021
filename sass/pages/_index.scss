@@ -175,10 +175,6 @@
         width: 23%;
     }
 
-    .fas {
-        @include fav-heart;
-    }
-
     &__img {
         width: 100%;
         border-radius: 1rem 1rem 0 0;
@@ -201,16 +197,29 @@
         top: 80%;
         left: 85%;
 
-        img {
+        .far {
             height: 20px;
             width: 20px;
             position: absolute;
             opacity: 1;
         }
 
-        img:hover {
+        .far:hover {
             opacity: 0;
-            transition: opacity 1s;
+            transition: opacity 700ms;
+        }
+
+        .fas {
+            @include fav-heart;
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            opacity: 0;
+        }
+
+        .fas:hover {
+            opacity: 1;
+            transition: opacity 700ms;
         }
     }
     &__heart-container {

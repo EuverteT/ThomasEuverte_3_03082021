@@ -394,12 +394,6 @@ h2 {
     width: 23%;
   }
 }
-.restaurant .fas {
-  display: block;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .restaurant__img {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
@@ -422,15 +416,29 @@ h2 {
   top: 80%;
   left: 85%;
 }
-.restaurant__heart img {
+.restaurant__heart .far {
   height: 20px;
   width: 20px;
   position: absolute;
   opacity: 1;
 }
-.restaurant__heart img:hover {
+.restaurant__heart .far:hover {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 700ms;
+}
+.restaurant__heart .fas {
+  display: block;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  opacity: 0;
+}
+.restaurant__heart .fas:hover {
+  opacity: 1;
+  transition: opacity 700ms;
 }
 .restaurant__heart-container {
   width: 100%;
@@ -6758,6 +6766,23 @@ readers do not read off random characters that represent icons */
 .fas {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("./webfonts/fa-regular-400.eot");
+  src: url("./webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-regular-400.woff2") format("woff2"), url("./webfonts/fa-regular-400.woff") format("woff"), url("./webfonts/fa-regular-400.ttf") format("truetype"), url("./webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */
