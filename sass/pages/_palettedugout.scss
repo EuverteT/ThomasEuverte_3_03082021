@@ -52,7 +52,9 @@ main {
 }
 .part {
     @include flex-column;
+    align-items: center;
     margin-bottom: 1.8rem;
+    overflow: hidden;
 
     @include tablet-desktop {
         width: 32%;
@@ -90,16 +92,14 @@ main {
 
 
     &__block {
-        @include flex-row;
-        flex-wrap: unset;
-        justify-content: space-between;
-        align-self: center;
+        display: flex;
         @include restaurant;
         width: 85%;
         margin-bottom: 0.8rem;
 
         &:hover {
             .part__block-Xanim {
+                width: 80px;
                 transform: scaleX(1);
                 transition: all 500ms;
             }
@@ -123,19 +123,35 @@ main {
         &-choice {
             display: flex;
             flex-wrap: wrap;
-            width: 95%;
+            width: 100%;
+            padding: 0.5rem 1.0rem 0.6rem 0.8rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
-            &-title {
+            &-first {
             width: 100%;
             @include bold-typo;
             font-size: 1.1rem;
             padding-bottom: 0.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             }
-            &-precision {
+
+            &-second {
                 @include soft-typo;
                 font-size: 0.9rem;
-                text-overflow: ellipsis;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
             }
+
+            &-precision {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
             &-price {
                 @include bold-typo;
                 font-size: 0.9rem;
@@ -146,13 +162,12 @@ main {
         &-Xanim {
             background-color: $colour-tertiary;
             border-radius: 0 1rem 1rem 0;
-            width: 150px;
+            width: 0;
             transform-origin: right;
             transform: scaleX(0);
             display: flex;
             justify-content: center;
             align-items: center;
-
 
             &-container {
                 width: 25px;
@@ -167,7 +182,6 @@ main {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%)
-
             }
         }
     }

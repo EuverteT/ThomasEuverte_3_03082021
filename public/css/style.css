@@ -524,7 +524,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 1.8rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 1023px) {
   .part {
@@ -559,12 +561,6 @@ main {
 }
 .part__block {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: unset;
-  justify-content: space-between;
-  align-self: center;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
@@ -576,6 +572,7 @@ main {
   transition: all 500ms;
 }
 .part__block:hover .part__block-Xanim {
+  width: 80px;
   transform: scaleX(1);
   transition: all 500ms;
 }
@@ -595,9 +592,12 @@ main {
 .part__block-choice {
   display: flex;
   flex-wrap: wrap;
-  width: 95%;
+  width: 100%;
+  padding: 0.5rem 1rem 0.6rem 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.part__block-choice-title {
+.part__block-choice-first {
   width: 100%;
   font-family: "Roboto";
   font-size: 1rem;
@@ -605,14 +605,24 @@ main {
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
   padding-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.part__block-choice-precision {
+.part__block-choice-second {
   font-family: "Roboto";
   font-size: 1.1rem;
   font-weight: 200;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.part__block-choice-precision {
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .part__block-choice-price {
   font-family: "Roboto";
@@ -624,7 +634,7 @@ main {
 .part__block-Xanim {
   background-color: #99E2D0;
   border-radius: 0 1rem 1rem 0;
-  width: 150px;
+  width: 0;
   transform-origin: right;
   transform: scaleX(0);
   display: flex;
