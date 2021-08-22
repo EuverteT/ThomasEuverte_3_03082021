@@ -110,13 +110,16 @@ main {
         }
 
         &--first {
-            animation: block 750ms;
+            animation: block 1000ms;
         }
         &--second {
-            animation: block 1250ms 100ms;
+            animation: block 1250ms 200ms;
         }
         &--third {
-            animation: block 1750ms 200ms;
+            animation: block 1750ms 350ms;
+        }
+        &--fourth {
+            animation: block 2250ms 500ms;
         }
 
 

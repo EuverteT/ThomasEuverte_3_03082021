@@ -581,13 +581,16 @@ main {
   transition: all 500ms;
 }
 .part__block--first {
-  animation: block 750ms;
+  animation: block 1000ms;
 }
 .part__block--second {
-  animation: block 1250ms 100ms;
+  animation: block 1250ms 200ms;
 }
 .part__block--third {
-  animation: block 1750ms 200ms;
+  animation: block 1750ms 350ms;
+}
+.part__block--fourth {
+  animation: block 2250ms 500ms;
 }
 .part__block-choice {
   display: flex;
