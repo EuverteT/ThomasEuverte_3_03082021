@@ -1,4 +1,5 @@
 .localisation {
+
     @include flex-row;
     background-color: $mid-grey;
 
@@ -15,6 +16,7 @@
                 height: 100%;
                 position: relative;
             }
+
             &-insert{
                 position: absolute;
                 top: 50%;
@@ -37,7 +39,6 @@
 
 .presentation {
     @include flex-column;
-
     background-color: $soft-grey;
     padding: 1.8rem 2rem 2.4rem 2rem;
 
@@ -45,11 +46,12 @@
         @include soft-typo;
         text-align: center;
     }
+
     &__btn {
         margin: 1.2rem;
         width: 70%;
 
-        @include tablet-desktop {
+        @include desktop {
             width: 40%
         }
 
@@ -61,10 +63,9 @@
     align-items: center;
     padding: 2rem 1rem 3rem 1rem;
 
-    @include tablet-desktop {
+    @include desktop {
         @include flex-row;
     }
-
 
     &__description {
         @include bold-typo;
@@ -83,7 +84,7 @@
     padding: 1.3rem 0;
     position: relative;
 
-    @include tablet-desktop {
+    @include desktop {
         width: 29%;
     }
 
@@ -159,7 +160,7 @@
     align-items: center;
     padding: 2.5rem 1rem 3.5rem 1rem;
 
-    @include tablet-desktop {
+    @include desktop {
         flex-direction: row;
         justify-content: space-evenly;
     }
@@ -171,7 +172,7 @@
     position: relative;
     margin: 0.5rem 0;
 
-    @include tablet-desktop {
+    @include desktop {
         width: 23%;
     }
 
@@ -202,11 +203,11 @@
             width: 20px;
             position: absolute;
             opacity: 1;
-        }
 
-        .far:hover {
-            opacity: 0;
-            transition: opacity 700ms;
+            &:hover {
+                opacity: 0;
+                transition: opacity 700ms;
+            }
         }
 
         .fas {
@@ -215,12 +216,14 @@
             width: 20px;
             position: absolute;
             opacity: 0;
+
+            &:hover {
+                opacity: 1;
+                transition: opacity 700ms;
+            }
         }
 
-        .fas:hover {
-            opacity: 1;
-            transition: opacity 700ms;
-        }
+        
     }
     &__heart-container {
         width: 100%;
