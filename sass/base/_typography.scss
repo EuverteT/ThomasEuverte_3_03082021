@@ -1,12 +1,12 @@
 h1 {
-    @include title-typo;
-    text-align: center;
-    padding: 1rem;
-    margin: 0;
+  @include title-typo;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
 }
 
 h2 {
-    @include title-typo;
-    width: 100%;
-    margin: 1rem 0;
+  @include title-typo;
+  width: 100%;
+  margin: 1rem 0;
 }

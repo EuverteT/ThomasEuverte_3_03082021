@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-size: 20px;
-  }
+}
 
 .loading-spinner {
   animation: spinner 3000ms;
@@ -32,9 +32,8 @@ body {
 @keyframes spinner-moving-text {
   0% {
     transform: translateX(300px);
-
   }
-  
+
   100% {
     transform: translateX(0px);
   }
@@ -49,12 +48,13 @@ body {
     opacity: 0;
   }
 
-  50%, 95% {
-    transform: scale(1) ;
+  50%,
+  95% {
+    transform: scale(1);
     opacity: 1;
   }
 
-  100%{
+  100% {
     opacity: 0;
   }
 }
@@ -86,4 +86,3 @@ img {
   object-fit: cover;
   height: 174px;
 }
-

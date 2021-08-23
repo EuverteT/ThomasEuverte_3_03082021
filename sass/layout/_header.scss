@@ -1,17 +1,15 @@
 .header {
-    @include flex-row;
-    padding: 1.2rem 2.5rem 1rem 2.5rem;
-    z-index: -1;
-  
+  @include flex-row;
+  padding: 1.2rem 2.5rem 1rem 2.5rem;
+  z-index: -1;
 
-    .fa-arrow-left {
-        align-self: center;
-        position: absolute;
-        left: 25px;
-    }
+  .fa-arrow-left {
+    align-self: center;
+    position: absolute;
+    left: 25px;
+  }
 }
 
 .logo-ohmyfood {
-    height: 1.7rem;
+  height: 1.7rem;
 }
-

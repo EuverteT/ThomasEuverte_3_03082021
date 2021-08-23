@@ -13,7 +13,7 @@ body {
   font-family: Shrikhand;
   color: black;
   font-size: 1.8rem;
-  background: radial-gradient(#FF79DA, #9356DC);
+  background: radial-gradient(#ff79da, #9356dc);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -106,7 +106,7 @@ h2 {
   padding: 1rem;
   align-self: center;
   color: white;
-  background: radial-gradient(#FF79DA, #9356DC);
+  background: radial-gradient(#ff79da, #9356dc);
   box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
   border: thin;
   position: relative;
@@ -308,7 +308,7 @@ h2 {
   transition: background-color 300ms;
 }
 .step-block:hover .fas {
-  color: #9356DC;
+  color: #9356dc;
   transition: color 300ms;
 }
 .step-block .fas {
@@ -324,7 +324,7 @@ h2 {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #9356DC;
+  background-color: #9356dc;
   align-self: center;
   position: absolute;
   left: -10px;
@@ -399,7 +399,7 @@ h2 {
   border-radius: 1rem 1rem 0 0;
 }
 .restaurant__new {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   position: absolute;
   top: 5%;
   right: 4%;
@@ -428,7 +428,7 @@ h2 {
 }
 .restaurant__heart .fas {
   display: block;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   height: 20px;
@@ -502,7 +502,7 @@ h2 {
 }
 .one-restaurant__information .fas {
   display: block;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -542,7 +542,7 @@ main {
   }
 }
 .part .fas {
-  color: #99E2D0;
+  color: #99e2d0;
   font-size: 1rem;
   transform: rotate(-360deg);
 }
@@ -555,7 +555,7 @@ main {
 }
 .part__highlight {
   margin: 0 1rem 1rem 1rem;
-  border: #99E2D0 1px double;
+  border: #99e2d0 1px double;
   width: 40px;
 }
 @keyframes block {
@@ -643,7 +643,7 @@ main {
   font-size: 0.9rem;
 }
 .part__block-Xanim {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   border-radius: 0 1rem 1rem 0;
   width: 0;
   transform-origin: right;

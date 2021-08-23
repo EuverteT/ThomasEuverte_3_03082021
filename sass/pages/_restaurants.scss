@@ -1,211 +1,202 @@
 .one-restaurant-img {
-    @include flex-column;
+  @include flex-column;
 
-    &__img {
-        height: 260px;
-        width: 100%;
-        position: relative;
-    }
+  &__img {
+    height: 260px;
+    width: 100%;
+    position: relative;
+  }
 }
 
 .one-restaurant {
+  width: 100%;
+  transform: translateY(-40px);
+  margin-bottom: -40px;
+
+  @include desktop {
+    @include flex-row;
+  }
+
+  &__information {
+    .fas {
+      @include fav-heart;
+    }
+
+    @include flex-row;
+    justify-content: unset;
+    padding: 2rem 0;
     width: 100%;
-    transform: translateY(-40px);
-    margin-bottom: -40px;
 
-    @include desktop {
-        @include flex-row;
+    &-name {
+      @include cool-text;
+      width: 85%;
+      text-align: center;
+
+      @include desktop {
+        width: 95%;
+      }
     }
 
-    &__information {
-
-        .fas {
-            @include fav-heart;
-        }
-
-        @include flex-row;
-        justify-content: unset;
-        padding: 2rem 0;
-        width: 100%;
-
-
-        &-name {
-            @include cool-text;
-            width: 85%;
-            text-align: center;
-
-            @include desktop {
-                width: 95%;
-            }
-        }
-
-        &-heart {
-            position: unset;
-            align-self: center;
-        }
+    &-heart {
+      position: unset;
+      align-self: center;
     }
-    
+  }
 }
 main {
-    background-color: $soft-grey;
-    border-radius: 3rem 3rem 0 0;
+  background-color: $soft-grey;
+  border-radius: 3rem 3rem 0 0;
 }
 .part {
-    @include flex-column;
-    align-items: center;
-    margin-bottom: 1.8rem;
-    overflow: hidden;
+  @include flex-column;
+  align-items: center;
+  margin-bottom: 1.8rem;
+  overflow: hidden;
 
-    @include desktop {
-        width: 32%;
-    }
+  @include desktop {
+    width: 32%;
+  }
 
-    .fas {
-        color: $colour-tertiary;
-        font-size: 1rem;
-        transform: rotate(-360deg);
-    }
+  .fas {
+    color: $colour-tertiary;
+    font-size: 1rem;
+    transform: rotate(-360deg);
+  }
 
-    &__title {
-        @include soft-typo;
-        padding: 0.2rem 1rem;
-    }
+  &__title {
+    @include soft-typo;
+    padding: 0.2rem 1rem;
+  }
 
-    &__highlight {
-        margin: 0 1rem 1rem 1rem;
-        border: $colour-tertiary 1px double;
-        width: 40px;
-    }
+  &__highlight {
+    margin: 0 1rem 1rem 1rem;
+    border: $colour-tertiary 1px double;
+    width: 40px;
+  }
 
-@keyframes block {
-
+  @keyframes block {
     0% {
-        opacity: 0;
-        transform: translateY(12px);
+      opacity: 0;
+      transform: translateY(12px);
     }
 
     100% {
-        opacity: 1;
+      opacity: 1;
+    }
+  }
+
+  &__block {
+    display: flex;
+    @include restaurant;
+    width: 85%;
+    margin-bottom: 0.8rem;
+
+    &:hover {
+      .part__block-Xanim {
+        width: 80px;
+        transform: scaleX(1);
+        transition: all 500ms;
+      }
+      .fas {
+        transform: rotate(0deg);
+        transition: all 500ms;
+      }
     }
 
-}
+    &--first {
+      animation: block 1000ms;
+    }
+    &--second {
+      animation: block 1250ms 200ms;
+    }
+    &--third {
+      animation: block 1750ms 350ms;
+    }
+    &--fourth {
+      animation: block 2250ms 500ms;
+    }
 
+    &-choice {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0.5rem 1rem 0.6rem 0.8rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
-    &__block {
+      &-first {
+        width: 100%;
+        @include bold-typo;
+        font-size: 1.1rem;
+        padding-bottom: 0.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &-second {
+        @include soft-typo;
+        font-size: 0.9rem;
         display: flex;
-        @include restaurant;
-        width: 85%;
-        margin-bottom: 0.8rem;
+        justify-content: space-between;
+        width: 100%;
+      }
 
-        &:hover {
-            .part__block-Xanim {
-                width: 80px;
-                transform: scaleX(1);
-                transition: all 500ms;
-            }
-            .fas {
-                transform: rotate(0deg);
-                transition: all 500ms;
-            }
-        }
+      &-precision {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
 
-        &--first {
-            animation: block 1000ms;
-        }
-        &--second {
-            animation: block 1250ms 200ms;
-        }
-        &--third {
-            animation: block 1750ms 350ms;
-        }
-        &--fourth {
-            animation: block 2250ms 500ms;
-        }
-
-
-        &-choice {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            padding: 0.5rem 1.0rem 0.6rem 0.8rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            &-first {
-                width: 100%;
-                @include bold-typo;
-                font-size: 1.1rem;
-                padding-bottom: 0.5rem;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-
-            &-second {
-                @include soft-typo;
-                font-size: 0.9rem;
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-            }
-
-            &-precision {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-
-            &-price {
-                @include bold-typo;
-                font-size: 0.9rem;
-            }
-
-        }
-        
-        &-Xanim {
-            background-color: $colour-tertiary;
-            border-radius: 0 1rem 1rem 0;
-            width: 0;
-            transform-origin: right;
-            transform: scaleX(0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &-container {
-                width: 25px;
-                height: 25px;
-                position: relative;
-                background-color: white;
-                border-radius: 1rem;
-            }
-
-            &-insert {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%)
-            }
-        }
+      &-price {
+        @include bold-typo;
+        font-size: 0.9rem;
+      }
     }
+
+    &-Xanim {
+      background-color: $colour-tertiary;
+      border-radius: 0 1rem 1rem 0;
+      width: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-container {
+        width: 25px;
+        height: 25px;
+        position: relative;
+        background-color: white;
+        border-radius: 1rem;
+      }
+
+      &-insert {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
 }
 
 .order {
-    @include flex-column;
-    padding: 0 2rem 2rem 2rem;
-    position: relative;
+  @include flex-column;
+  padding: 0 2rem 2rem 2rem;
+  position: relative;
+
+  @include desktop {
+    width: 100%;
+  }
+
+  &__btn {
+    margin: 1rem;
+    width: 70%;
 
     @include desktop {
-        width: 100%;
+      width: 30%;
     }
-
-    &__btn {
-        margin: 1rem;
-        width: 70%;
-
-        @include desktop {
-            width: 30%;
-        }
-
-    }
+  }
 }

@@ -1,248 +1,239 @@
 .localisation {
+  @include flex-row;
+  background-color: $mid-grey;
 
-    @include flex-row;
-    background-color: $mid-grey;
+  .fa-map-marker-alt {
+    font-size: 1rem;
+  }
 
-    .fa-map-marker-alt {
-        font-size: 1rem;
+  &__map-icon {
+    height: 50px;
+    width: 50px;
+
+    &-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
     }
 
-        &__map-icon{
-            height: 50px;
-            width: 50px;
-
-            &-container{
-                width: 100%;
-                height: 100%;
-                position: relative;
-            }
-
-            &-insert{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-        &__form{
-            align-self: center;
-
-            input {
-                border-style: none;
-                background-color: $mid-grey;
-                @include bold-typo;
-            }
-        }
-
+    &-insert {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
+  }
+  &__form {
+    align-self: center;
 
+    input {
+      border-style: none;
+      background-color: $mid-grey;
+      @include bold-typo;
+    }
+  }
+}
 
 .presentation {
-    @include flex-column;
-    background-color: $soft-grey;
-    padding: 1.8rem 2rem 2.4rem 2rem;
+  @include flex-column;
+  background-color: $soft-grey;
+  padding: 1.8rem 2rem 2.4rem 2rem;
 
-    &__information {
-        @include soft-typo;
-        text-align: center;
+  &__information {
+    @include soft-typo;
+    text-align: center;
+  }
+
+  &__btn {
+    margin: 1.2rem;
+    width: 70%;
+
+    @include desktop {
+      width: 40%;
     }
-
-    &__btn {
-        margin: 1.2rem;
-        width: 70%;
-
-        @include desktop {
-            width: 40%
-        }
-
-    }
+  }
 }
 
 .steps {
-    @include flex-column;
-    align-items: center;
-    padding: 2rem 1rem 3rem 1rem;
+  @include flex-column;
+  align-items: center;
+  padding: 2rem 1rem 3rem 1rem;
 
-    @include desktop {
-        @include flex-row;
-    }
+  @include desktop {
+    @include flex-row;
+  }
 
-    &__description {
-        @include bold-typo;
-        align-self: center;
-    }
-
+  &__description {
+    @include bold-typo;
+    align-self: center;
+  }
 }
 
 .step-block {
-    @include flex-row;
-    justify-content: unset;
-    width: 95%;
-    background-color: $soft-grey;
-    border-radius: 1.5rem;
-    margin: 0.8rem 1.2rem;
-    padding: 1.3rem 0;
+  @include flex-row;
+  justify-content: unset;
+  width: 95%;
+  background-color: $soft-grey;
+  border-radius: 1.5rem;
+  margin: 0.8rem 1.2rem;
+  padding: 1.3rem 0;
+  position: relative;
+
+  @include desktop {
+    width: 29%;
+  }
+
+  &:hover {
+    background-color: hsl(267, 66, 90);
+    transition: background-color 300ms;
+
+    & .fas {
+      color: $colour-primary;
+      transition: color 300ms;
+    }
+  }
+
+  .fas {
+    color: $hard-grey;
+  }
+  .fa-store {
+    transform: scaleX(0.8);
+  }
+  .fa-list {
+    transform: scaleX(0.8);
+  }
+
+  &__number {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $colour-primary;
+    align-self: center;
+    position: absolute;
+    left: -10px;
+  }
+
+  &__number-container {
+    width: 100%;
+    height: 100%;
     position: relative;
+  }
 
-    @include desktop {
-        width: 29%;
-    }
+  &__number-insert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include bold-typo;
+    color: white;
+  }
 
-    &:hover {
-        background-color: hsl(267,66,90);
-        transition: background-color 300ms;
+  &__icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 1.5rem;
+  }
 
-        & .fas {
-            color: $colour-primary;
-            transition: color 300ms;
-        }
-    }
+  &__icon-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
 
-    .fas {
-        color: $hard-grey;
-    }
-    .fa-store {
-        transform: scaleX(0.8);
-    }
-    .fa-list{
-        transform: scaleX(0.8);
-    }
-
-    &__number {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background-color: $colour-primary;
-        align-self: center;
-        position: absolute;
-        left: -10px;
-    }
-
-    &__number-container {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    &__number-insert {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        @include bold-typo;
-        color: white;
-    }
-
-    &__icon {
-        width: 30px;
-        height: 30px;
-        margin: 0 1.5rem;    
-    }
-
-    &__icon-container {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    &__icon-insert {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
+  &__icon-insert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .container {
-    @include flex-column;
-    background-color: $soft-grey;
-    align-items: center;
-    padding: 2.5rem 1rem 3.5rem 1rem;
+  @include flex-column;
+  background-color: $soft-grey;
+  align-items: center;
+  padding: 2.5rem 1rem 3.5rem 1rem;
 
-    @include desktop {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 .restaurant {
-    @include restaurant;
-    width: 95%;
+  @include restaurant;
+  width: 95%;
+  position: relative;
+  margin: 0.5rem 0;
+
+  @include desktop {
+    width: 23%;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+  &__new {
+    background-color: #99e2d0;
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    padding: 0.4rem 0.7rem 0.2rem 0.7rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 0.1rem;
+    color: #008766;
+  }
+  &__heart {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 80%;
+    left: 85%;
+
+    .far {
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0;
+        transition: opacity 700ms;
+      }
+    }
+
+    .fas {
+      @include fav-heart;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 700ms;
+      }
+    }
+  }
+  &__heart-container {
+    width: 100%;
+    height: 100%;
     position: relative;
-    margin: 0.5rem 0;
-
-    @include desktop {
-        width: 23%;
-    }
-
-    &__img {
-        width: 100%;
-        border-radius: 1rem 1rem 0 0;
-    }
-    &__new {
-        background-color: #99E2D0;
-        position: absolute;
-        top: 5%;
-        right: 4%;
-        padding: 0.4rem 0.7rem 0.2rem 0.7rem;
-        font-size: 0.9rem;
-        font-weight: 700;
-        border-radius: 0.1rem;
-        color: #008766;
-    }
-    &__heart {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 80%;
-        left: 85%;
-
-        .far {
-            height: 20px;
-            width: 20px;
-            position: absolute;
-            opacity: 1;
-
-            &:hover {
-                opacity: 0;
-                transition: opacity 700ms;
-            }
-        }
-
-        .fas {
-            @include fav-heart;
-            height: 20px;
-            width: 20px;
-            position: absolute;
-            opacity: 0;
-
-            &:hover {
-                opacity: 1;
-                transition: opacity 700ms;
-            }
-        }
-        
-    }
-    &__heart-container {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-    &__heart-insert {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    &__name {
-        @include bold-typo;
-        font-size: 1.2rem;
-        padding: 0.5rem 0 0.1rem 0.8rem;
-    }
-    &__description {
-        @include soft-typo;
-        padding: 0.1rem 0 1rem 0.8rem;
-    }
- 
+  }
+  &__heart-insert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__name {
+    @include bold-typo;
+    font-size: 1.2rem;
+    padding: 0.5rem 0 0.1rem 0.8rem;
+  }
+  &__description {
+    @include soft-typo;
+    padding: 0.1rem 0 1rem 0.8rem;
+  }
 }
