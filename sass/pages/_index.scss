@@ -213,6 +213,7 @@
       &:hover {
         opacity: 1;
         transition: opacity 700ms;
+        transition-timing-function: ease-out;
       }
     }
   }

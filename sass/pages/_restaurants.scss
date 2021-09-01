@@ -95,7 +95,7 @@ main {
       .part__block-Xanim {
         width: 80px;
         transform: scaleX(1);
-        transition: all 500ms;
+        transition: all 500ms cubic-bezier(.7,.01,.23,.99);
       }
       .fas {
         transform: rotate(0deg);

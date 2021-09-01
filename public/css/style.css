@@ -438,6 +438,7 @@ h2 {
 .restaurant__heart .fas:hover {
   opacity: 1;
   transition: opacity 700ms;
+  transition-timing-function: ease-out;
 }
 .restaurant__heart-container {
   width: 100%;
@@ -581,7 +582,7 @@ main {
 .part__block:hover .part__block-Xanim {
   width: 80px;
   transform: scaleX(1);
-  transition: all 500ms;
+  transition: all 500ms cubic-bezier(0.7, 0.01, 0.23, 0.99);
 }
 .part__block:hover .fas {
   transform: rotate(0deg);
