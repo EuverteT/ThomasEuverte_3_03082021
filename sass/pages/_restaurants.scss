@@ -90,16 +90,17 @@ main {
     @include restaurant;
     width: 85%;
     margin-bottom: 0.8rem;
+    cursor: pointer;
 
     &:hover {
       .part__block-Xanim {
         width: 80px;
         transform: scaleX(1);
-        transition: all 500ms cubic-bezier(.7,.01,.23,.99);
+        transition: transform 500ms ease-in-out;
       }
       .fas {
         transform: rotate(0deg);
-        transition: all 500ms;
+        transition: transform 500ms;
       }
     }
 

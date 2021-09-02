@@ -110,6 +110,7 @@ h2 {
   border: thin;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 .btn:hover::after {
   opacity: 1;
@@ -414,6 +415,7 @@ h2 {
   position: absolute;
   top: 80%;
   left: 85%;
+  cursor: pointer;
 }
 .restaurant__heart .far {
   height: 20px;
@@ -423,7 +425,7 @@ h2 {
 }
 .restaurant__heart .far:hover {
   opacity: 0;
-  transition: opacity 700ms;
+  transition: opacity 700ms ease-in-out;
 }
 .restaurant__heart .fas {
   display: block;
@@ -437,8 +439,7 @@ h2 {
 }
 .restaurant__heart .fas:hover {
   opacity: 1;
-  transition: opacity 700ms;
-  transition-timing-function: ease-out;
+  transition: opacity 700ms ease-in-out;
 }
 .restaurant__heart-container {
   width: 100%;
@@ -574,6 +575,7 @@ main {
   box-shadow: 0.7rem 0.7rem 1rem #c8c8c8;
   width: 85%;
   margin-bottom: 0.8rem;
+  cursor: pointer;
 }
 .part__block:hover {
   box-shadow: 0.7rem 0.7rem 1rem #828282;
@@ -582,11 +584,11 @@ main {
 .part__block:hover .part__block-Xanim {
   width: 80px;
   transform: scaleX(1);
-  transition: all 500ms cubic-bezier(0.7, 0.01, 0.23, 0.99);
+  transition: transform 500ms ease-in-out;
 }
 .part__block:hover .fas {
   transform: rotate(0deg);
-  transition: all 500ms;
+  transition: transform 500ms;
 }
 .part__block--first {
   animation: block 1000ms;
