@@ -410,49 +410,6 @@ h2 {
   border-radius: 0.1rem;
   color: #008766;
 }
-.restaurant__heart {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 80%;
-  left: 85%;
-  cursor: pointer;
-}
-.restaurant__heart .far {
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  opacity: 1;
-}
-.restaurant__heart .far:hover {
-  opacity: 0;
-  transition: opacity 700ms ease-in-out;
-}
-.restaurant__heart .fas {
-  display: block;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  opacity: 0;
-}
-.restaurant__heart .fas:hover {
-  opacity: 1;
-  transition: opacity 700ms ease-in-out;
-}
-.restaurant__heart-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.restaurant__heart-insert {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .restaurant__name {
   font-family: "Roboto";
   font-size: 1rem;
@@ -462,11 +419,64 @@ h2 {
   padding: 0.5rem 0 0.1rem 0.8rem;
 }
 .restaurant__description {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: unset;
+}
+.restaurant__description-text {
   font-family: "Roboto";
   font-size: 1.1rem;
   font-weight: 200;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.3);
   padding: 0.1rem 0 1rem 0.8rem;
+  width: 85%;
+}
+.restaurant__description-fav {
+  width: 10%;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.heart .far {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  opacity: 1;
+}
+.heart .far:hover {
+  opacity: 0;
+  transition: opacity 700ms ease-in-out;
+}
+.heart .fas {
+  display: block;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  opacity: 0;
+}
+.heart .fas:hover {
+  opacity: 1;
+  transition: opacity 700ms ease-in-out;
+}
+.heart__heart-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.heart__heart-insert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .one-restaurant-img {
