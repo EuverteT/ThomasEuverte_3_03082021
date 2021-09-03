@@ -1,0 +1,68 @@
+//Le code ci-dessous concerne le loading spinner au chargement de la page d'accueil.
+.loading-spinner {
+  animation: spinner 3000ms;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  opacity: 0;
+  @include cool-text;
+  background: $gradient;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  &__text {
+    &--1 {
+      animation: spinner-moving-text 1000ms;
+    }
+    &--2 {
+      animation: spinner-moving-text 1750ms;
+    }
+    &--3 {
+      animation: spinner-moving-text 2500ms;
+    }
+  }
+}
+
+.spinner-active {
+  animation: background-spinner 3000ms;
+}
+
+//Les keyframes ci-dessous permettent de déplacer le texte de droite à gauche.
+@keyframes spinner-moving-text {
+  0% {
+    transform: translateX(300px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+//Les keyframes ci-dessous permettent de faire apparaitre le loading spinner.
+@keyframes spinner {
+  0% {
+    opacity: 0;
+  }
+
+  50%,
+  95% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+//Les keyframes ci-dessous permettent de faire disparaitre l'arrière plan en le laissant légérement visible.
+@keyframes background-spinner {
+  0% {
+    opacity: 0.01;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}

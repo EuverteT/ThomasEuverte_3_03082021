@@ -3,63 +3,6 @@ body {
   font-size: 20px;
 }
 
-.loading-spinner {
-  animation: spinner 3000ms;
-  position: absolute;
-  top: 50%;
-  z-index: 3;
-  opacity: 0;
-  font-family: Shrikhand;
-  color: black;
-  font-size: 1.8rem;
-  background: radial-gradient(#ff79da, #9356dc);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-.loading-spinner__text--1 {
-  animation: spinner-moving-text 1000ms;
-}
-.loading-spinner__text--2 {
-  animation: spinner-moving-text 1750ms;
-}
-.loading-spinner__text--3 {
-  animation: spinner-moving-text 2500ms;
-}
-
-@keyframes spinner-moving-text {
-  0% {
-    transform: translateX(300px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-.spinner-active {
-  animation: background-spinner 3000ms;
-}
-
-@keyframes spinner {
-  0% {
-    opacity: 0;
-  }
-  50%, 95% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes background-spinner {
-  0% {
-    opacity: 0.01;
-  }
-  100% {
-    opacity: 0.2;
-  }
-}
 ul {
   list-style-type: none;
   padding: 0;
@@ -130,6 +73,63 @@ h2 {
   z-index: -1;
 }
 
+.loading-spinner {
+  animation: spinner 3000ms;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  opacity: 0;
+  font-family: Shrikhand;
+  color: black;
+  font-size: 1.8rem;
+  background: radial-gradient(#ff79da, #9356dc);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.loading-spinner__text--1 {
+  animation: spinner-moving-text 1000ms;
+}
+.loading-spinner__text--2 {
+  animation: spinner-moving-text 1750ms;
+}
+.loading-spinner__text--3 {
+  animation: spinner-moving-text 2500ms;
+}
+
+.spinner-active {
+  animation: background-spinner 3000ms;
+}
+
+@keyframes spinner-moving-text {
+  0% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes spinner {
+  0% {
+    opacity: 0;
+  }
+  50%, 95% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes background-spinner {
+  0% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -214,6 +214,7 @@ h2 {
 .localisation__map-icon {
   height: 50px;
   width: 50px;
+  margin-left: 4rem;
 }
 .localisation__map-icon-container {
   width: 100%;
