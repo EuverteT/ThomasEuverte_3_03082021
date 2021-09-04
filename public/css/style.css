@@ -475,6 +475,11 @@ h2 {
   padding: 0.1rem 0 1rem 0.8rem;
   width: 85%;
 }
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .restaurant__description-text {
+    width: 80%;
+  }
+}
 .restaurant__description-fav {
   width: 10%;
 }
